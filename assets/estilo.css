@@ -1,5 +1,6 @@
 body {
 	background-image: url('subtlenet2.png');
+	-webkit-font-smoothing: antialiased;
 }
 
 .justify {

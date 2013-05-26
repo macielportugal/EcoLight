@@ -1,31 +1,26 @@
 $(document).ready(function() {
 
+	// Carrega home por padrão
 	$('#conteudo').load('conteudo/home.html');
 
-	$('#home').click(function() {
-		$('#conteudo').load('conteudo/home.html');
-	});
+	// Função para carregar o conteúdo
+	function loadPage(page) {
+		$('#' + page).click(function() {
+			$('#conteudo').load('conteudo/' + page + '.html');
+		});
+	}
 
-	$('#quemsomos').click(function() {
-		$('#conteudo').load('conteudo/quemsomos.html');
-	});
+	// Array das páginas do site
+	var pages = ['home','quemsomos','comofunciona', 'tiposdepainel', 'faq', 'contato'];
+	
+	// Loop de carregamento das páginas
+	var length = pages.length;
+	for (var i = 0; i < length; i++) {
+		var page = pages[i];
+		loadPage(page);
+	}
 
-	$('#comofunciona').click(function() {
-		$('#conteudo').load('conteudo/comofunciona.html');
-	});
-
-	$('#tiposdepainel').click(function() {
-		$('#conteudo').load('conteudo/tiposdepainel.html');
-	});
-
-	$('#faq').click(function() {
-		$('#conteudo').load('conteudo/faq.html');
-	});
-
-	$('#contato').click(function() {
-		$('#conteudo').load('conteudo/contato.html');
-	});
-
+	// Classe active ao clicar
 	$('li.menu').click(function() {
 	    $('li.menu').removeClass("active");
 	    $(this).addClass("active");
