@@ -1,6 +1,7 @@
 body {
 	background-image: url('subtlenet2.png');
 	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto Slab', serif;
 }
 
 .justify {
@@ -41,7 +42,6 @@ body {
 }
 
 .hero-unit h1 {
-	font-family: 'Carrois Gothic SC', sans-serif;
 	text-shadow: 1px 1px #999;
 }
 
