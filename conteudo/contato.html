@@ -1,0 +1,57 @@
+<div class="hero-unit">
+	<div class="container animated fadeInUp">
+		<h1><i class="icon-envelope-alt blue"></i> Contato</h1>
+		<p class="justify muted lead">Deseja contratar nossos serviços? Envie-nos uma mensagem e responderemos o mais rápido possível!</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="span4">
+			<legend><h3 class="blue">Formulário</h3></legend>
+			<form>
+				<label for="nome">Nome</label>
+				<input class="span4" type="text" name="nome" id="nome">
+				<label for="sobrenome">Sobrenome</label>
+				<input class="span4" type="text" name="sobrenome" id="sobrenome">
+				<label for="email">E-mail</label>
+				<input class="span4" type="text" name="email" id="email">
+				<label for="assunto">Assunto</label>
+				<input class="span4" type="text" name="assunto" id="assunto">
+				<label for="mensagem">Mensagem</label>
+				<textarea class="span4" name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+				<br>
+				<input class="btn btn-inverse" type="reset" value="Reseta">
+				<input class="btn btn-info pull-right" id="envia" type="button" value="Enviar">
+				<br>
+				<br>
+				<div id="success" class="alert alert-success">E-mail enviado com sucesso!</div>
+			</form>
+		</div>
+		<div class="span4 offset4">
+			<legend><h3 class="blue">Endereço</h3></legend>
+			<address>
+				<strong>EcoLight</strong> <br>
+				Rua Álvaro Rodrigues, Nº 383 <br>
+				Itaim Bibi, São Paulo - SP <br>
+				04582-000
+			</address>
+			<br>
+			<br>
+			<legend><h3 class="blue">E-mail</h3></legend>
+			contato@ecolight.com.br
+			<br>
+			<br>
+			<legend><h3 class="blue">Telefone</h3></legend>
+			(11)  578-2499
+			<br>
+			<br>
+			<legend><h3 class="blue">Trabalhe conosco!</h3></legend>
+			Envie seu currículo para nosso e-mail.
+		</div>
+	</div>
+</div>
+<script>
+	$('#envia').click(function() {
+	      $('#success').fadeIn();
+	});
+</script>
