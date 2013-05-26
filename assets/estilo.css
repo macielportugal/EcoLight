@@ -71,6 +71,11 @@ body {
 	display: none;
 }
 
+.flup:first-letter {
+	font-size: 2em;
+	margin-left: 24px;
+}
+
 footer {
 	margin-top: 60px;
 	background-color: #EEF;

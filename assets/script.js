@@ -1,26 +1,26 @@
 $(document).ready(function() {
 
-	// Carrega home por padrão
-	$('#conteudo').load('conteudo/home.html');
+	// Lista das páginas do site
+	var pages = ['home', 'quemsomos', 'comofunciona', 'tiposdepainel', 'faq', 'contato'];
 
-	// Função para carregar o conteúdo
+	// Carrega home por padrão
+	$('#conteudo').load('conteudo/' + pages[0] + '.html');
+
+	// Função para carregar o conteúdo ao clicar
 	function loadPage(page) {
 		$('#' + page).click(function() {
 			$('#conteudo').load('conteudo/' + page + '.html');
 		});
 	}
-
-	// Array das páginas do site
-	var pages = ['home','quemsomos','comofunciona', 'tiposdepainel', 'faq', 'contato'];
 	
-	// Loop de carregamento das páginas
-	var length = pages.length;
-	for (var i = 0; i < length; i++) {
+	// Pra cada página, utiliza a função clicada
+	var pLen = pages.length;
+	for (var i = 0; i < pLen; i++) {
 		var page = pages[i];
 		loadPage(page);
 	}
 
-	// Classe active ao clicar
+	// Adiciona classe active ao clicar nos ítens do menu
 	$('li.menu').click(function() {
 	    $('li.menu').removeClass("active");
 	    $(this).addClass("active");
